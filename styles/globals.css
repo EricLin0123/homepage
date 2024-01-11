@@ -75,3 +75,14 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+.your-component {
+  /* Your regular styles here */
+}
+
+.your-component.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Additional styles for fixed position */
+}

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Cursor from "../components/Cursor";
 import Header from "../components/Header";
 import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
-import Button from "../components/Button";
 import { useTheme } from "next-themes";
+
 // Data
 import { name, showResume } from "../data/portfolio.json";
 import { resume } from "../data/portfolio.json";
@@ -24,14 +23,13 @@ const Resume = () => {
   }, []);
   return (
     <>
-      {process.env.NODE_ENV === "development" && (
+      {/* {process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-6 right-6">
           <Button onClick={() => router.push("/edit")} type={"primary"}>
             Edit Resume
           </Button>
         </div>
-      )}
-      {data.showCursor && <Cursor />}
+      )} */}
       <div
         className={`container mx-auto mb-10 ${
           data.showCursor && "cursor-none"
@@ -50,9 +48,22 @@ const Resume = () => {
               <h2 className="w-4/5 text-xl mt-5 opacity-50">
                 {resume.description}
               </h2>
+
               <div className="mt-2">
                 <Socials />
               </div>
+
+              <div className="mt-5">
+                <h1 className="text-2xl font-bold">Education</h1>
+                {resume.education.map(({ schoolName, Date, Para }) => (
+                  <div key={schoolName} className="mt-2">
+                    <h2 className="text-lg">{schoolName}</h2>
+                    <h3 className="text-sm opacity-75">{Date}</h3>
+                    <p className="text-sm mt-2 opacity-50">{Para}</p>
+                  </div>
+                ))}
+              </div>
+
               <div className="mt-5">
                 <h1 className="text-2xl font-bold">Experience</h1>
 
@@ -68,18 +79,7 @@ const Resume = () => {
                   )
                 )}
               </div>
-              <div className="mt-5">
-                <h1 className="text-2xl font-bold">Education</h1>
-                <div className="mt-2">
-                  <h2 className="text-lg">{resume.education.universityName}</h2>
-                  <h3 className="text-sm opacity-75">
-                    {resume.education.universityDate}
-                  </h3>
-                  <p className="text-sm mt-2 opacity-50">
-                    {resume.education.universityPara}
-                  </p>
-                </div>
-              </div>
+
               <div className="mt-5">
                 <h1 className="text-2xl font-bold">Skills</h1>
                 <div className="flex mob:flex-col desktop:flex-row justify-between">
@@ -109,11 +109,11 @@ const Resume = () => {
                     </div>
                   )}
 
-                  {resume.others && (
+                  {resume.PCB && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Others</h2>
+                      <h2 className="text-lg">PCB</h2>
                       <ul className="list-disc">
-                        {resume.others.map((other, index) => (
+                        {resume.PCB.map((other, index) => (
                           <li key={index} className="ml-5 py-2">
                             {other}
                           </li>

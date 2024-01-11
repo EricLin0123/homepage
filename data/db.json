@@ -1,0 +1,132 @@
+{
+  "name": "Wan Chuan Lin",
+  "headerTaglineOne": "Hello 🖐",
+  "headerTaglineTwo": "I am 林萬荃 👨🏽‍💻",
+  "headerTaglineThree": "Embedded system engineer",
+  "headerTaglineFour": " Love to draw PCB",
+  "showCursor": false,
+  "showBlog": false,
+  "darkMode": true,
+  "showResume": true,
+  "socials": [
+    {
+      "id": "1",
+      "title": "",
+      "link": "https://github.com/EricLin0123",
+      "icon": "GitHub"
+    },
+    {
+      "id": "2",
+      "title": "",
+      "link": "https://www.linkedin.com/in/%E8%90%AC%E8%8D%83-%E6%9E%97-ab3413256/",
+      "icon": "LinkedIn"
+    },
+    {
+      "id": "3",
+      "title": "",
+      "link": "https://www.instagram.com/150107jasmine/",
+      "icon": "Instagram"
+    },
+    {
+      "id": "4",
+      "title": "",
+      "link": "https://www.facebook.com/profile.php?id=100004631940010",
+      "icon": "Facebook"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "LED cube",
+      "description": "A LED cube as desktop decoration",
+      "imageSrc": "LED_cube.gif"
+    },
+    {
+      "id": 2,
+      "title": "Charge monitor",
+      "description": "USB type-C charging monitor",
+      "imageSrc": "IMG20240108205850.jpg"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Art Direction",
+      "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+    },
+    {
+      "id": "2",
+      "title": "Branding",
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    },
+    {
+      "id": "3",
+      "title": "Web Design",
+      "description": "We build and optimize your online presence. Website is the digital entry point into your business and a powerful revenue channel."
+    },
+    {
+      "id": "4",
+      "title": "3D Design",
+      "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+    }
+  ],
+  "aboutpara": "I am a bachelor EE student having a strong passion in PCB layout and embedded system development.  I've used EasyEDA and Kicad to draw footprint, schematic, and layout. I am currently implementing LVGL and FreeRTOS.",
+  "resume": {
+    "tagline": "👋  I'm a embedded system engineer, maker.",
+    "description": "I am a third-year bachelor student at the Department of Electrical Engineering in National Taiwan University having a strong passion in PCB layout and embedded system development.  I've used EasyEDA and Kicad to draw footprint, schematic, and layout. I am currently learning and implementing LVGL and FreeRTOS.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "October 2023 - Present",
+        "type": "Part time",
+        "position": "Embedded system engineer at Seample Coral",
+        "bullets": [
+          "Work as embedded engineer to design the lighting and temperature control system in the aquarium product line",
+          "My job involves architecture design, chip selection, writing firmware, PCB layout and testing."
+        ]
+      },
+      {
+        "id": "2",
+        "dates": "March 2024 - June 2024",
+        "type": "Full Time",
+        "position": "Teaching assistant of Introduction to electrical engineering design and implementation",
+        "bullets": [
+          "Teaching assistant help student debug their circuit and firmware and give advice on project architecture. ",
+          "Line following car based on Arduino as midterm project"
+        ]
+      },
+      {
+        "id": "2",
+        "dates": "August 2023 - Present",
+        "type": "Full Time",
+        "position": "Lecturer of PCB layout and STM32 at Student Association Academic Department",
+        "bullets": [
+          "Design and teach project based lecture to let junior students become familiar with circuit design and embedded C programming."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "schoolName": "National Taiwan University - Electrical Engineering",
+        "Date": "2021-2025",
+        "Para": "Lovely campus, great professors, and a lot of freedom to choose courses."
+      },
+      {
+        "schoolName": "Mathematics and Science Gifted Class at Affiliated Senior High School of National Taiwan Normal University",
+        "Date": "2019-2021",
+        "Para": "I was in the Mathematics and Science Gifted Class at Affiliated Senior High School of National Taiwan Normal University."
+      }
+    ],
+    "languages": ["C", "Python", "Javascript", "HTML5", "CSS"],
+    "frameworks": [
+      "FreeRTOS",
+      "LVGL",
+      "Embedded C",
+      "React",
+      "Typescript",
+      "NodeJs",
+      "NextJs"
+    ],
+    "PCB": ["KiCAD", "Altium Designer", "EasyEDA"]
+  }
+}
