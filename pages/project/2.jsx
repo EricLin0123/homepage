@@ -5,7 +5,7 @@ import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { useRef } from "react";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-
+import Image from "next/image";
 const { projects } = data;
 const index = 1;
 
