@@ -29,9 +29,6 @@ function ProjectPage() {
       <div className="justify-self-center text-xl">
         {projects[index].description}
       </div>
-      <div className="justify-self-center text-xl">
-        Detail description and open-source file coming soon ...
-      </div>
       <Footer />
     </div>
   );

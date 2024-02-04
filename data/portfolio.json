@@ -45,7 +45,7 @@
       "id": 2,
       "title": "Charge monitor",
       "description": "USB type-C charging monitor",
-      "imageSrc": "IMG20240108205850.jpg"
+      "imageSrc": "2/overview.jpg"
     }
   ],
   "services": [
@@ -57,7 +57,7 @@
     {
       "id": "2",
       "title": "Embedded C programming",
-      "description": "Write firmware for your project including FreeRTOS for multithread application and LVGL for light weight graphic user interface"
+      "description": "Write firmware for your project including FreeRTOS and LVGL for light weight graphic user interface"
     }
   ],
   "aboutpara": "I am a bachelor EE student having a strong passion in PCB layout and embedded system development.  I've used EasyEDA and Kicad to draw footprint, schematic, and layout. I am currently implementing LVGL and FreeRTOS.",
