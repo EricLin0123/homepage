@@ -122,7 +122,7 @@ export default function Home() {
         </div>
         <div className="w-full px-10 flex-col grid grid-cols-1 justify-items-auto">
           {data.articles.map((article) => (
-            <div className="justify-self-stretch">
+            <div key={article.id} className="justify-self-stretch">
               <ArticleCard
                 key={article.id}
                 img={article.imageSrc}

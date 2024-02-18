@@ -14,22 +14,22 @@ function Article() {
         <hr></hr>
         <div className="content text-base">
           <p>
-            ESD stands for "ElectroStatic Discharge". In electronics, ESD can
-            generate a very high voltage (generally {">"} 500V) and moderate
-            peak current (~1A to 10A) that occurs in a short time frame. It
-            comes into play when two conductive objects approach each other and
-            form a strong electric field, which can cause a field-induced
-            breakdown. An arc can occur when the voltage between the objects
-            exceeds the breakdown voltage of the air or the insulation between
-            them. In environments where the relative humidity is very low, an
-            ESD event may have a peak voltage as high as 15,000 volts. The arc
-            continues until the objects touch, shorting out the arc, or until
-            the voltage drops too low to sustain the arc.
+            ESD stands for &quot; ElectroStatic Discharge &quot;. In
+            electronics, ESD can generate a very high voltage (generally {">"}{" "}
+            500V) and moderate peak current (~1A to 10A) that occurs in a short
+            time frame. It comes into play when two conductive objects approach
+            each other and form a strong electric field, which can cause a
+            field-induced breakdown. An arc can occur when the voltage between
+            the objects exceeds the breakdown voltage of the air or the
+            insulation between them. In environments where the relative humidity
+            is very low, an ESD event may have a peak voltage as high as 15,000
+            volts. The arc continues until the objects touch, shorting out the
+            arc, or until the voltage drops too low to sustain the arc.
           </p>
           <br></br>
           <p>
-            To tackle the surge voltage induce by ESD we can connect "Transient
-            Voltage Suppressor" or TVS to the circuit.
+            To tackle the surge voltage induce by ESD we can connect
+            &quot;Transient Voltage Suppressor&quot; or TVS to the circuit.
           </p>
         </div>
         <div className="Title text-xl pt-10 pb-5">
@@ -39,14 +39,14 @@ function Article() {
         <p>
           TVS diodes are used to protect semiconductor components from
           high-voltage transients. They are placed in front of the components
-          that need protection and act as a "steering diode" to shunt the
-          current when the voltage exceeds the breakdown voltage. TVS diodes are
-          designed to handle large amounts of power in a very short time. They
-          can be used to protect against ESD, lightning, and other high-voltage
-          transients. TVS diodes are used in a variety of applications,
-          including automotive, industrial, and consumer electronics. They are
-          also used in power supplies, telecommunications equipment, and other
-          electronic devices.
+          that need protection and act as a &quot;steering diode &quot; to shunt
+          the current when the voltage exceeds the breakdown voltage. TVS diodes
+          are designed to handle large amounts of power in a very short time.
+          They can be used to protect against ESD, lightning, and other
+          high-voltage transients. TVS diodes are used in a variety of
+          applications, including automotive, industrial, and consumer
+          electronics. They are also used in power supplies, telecommunications
+          equipment, and other electronic devices.
           <br></br>
           <br></br>
           Here is a simple TVS diode circuit for DC applications:
