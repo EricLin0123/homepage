@@ -17,18 +17,14 @@
     "@headlessui/react": "^1.6.6",
     "@mui/icons-material": "^5.15.3",
     "@mui/material": "^5.15.3",
-    "autoprefixer": "^10.4.7",
     "fs": "^0.0.1-security",
-    "gerber-plotter": "^4.2.8",
     "gray-matter": "^4.0.3",
     "gsap": "^3.12.4",
     "json-server": "^1.0.0-alpha.14",
     "next": "12.1.6",
     "next-themes": "^0.2.0",
     "parse-numeric-range": "^1.3.0",
-    "postcss": "^8.4.13",
     "react": "18.1.0",
-    "react-3d-viewer": "^1.0.12",
     "react-datepicker": "^4.8.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.12.0",
@@ -39,15 +35,17 @@
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "styled-components": "^5.3.5",
-    "tailwindcss": "^3.0.24",
     "three": "^0.161.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/node": "^20.10.7",
+    "autoprefixer": "^10.4.17",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
     "gh-pages": "^6.1.1",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
 }

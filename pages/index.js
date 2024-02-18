@@ -66,7 +66,7 @@ export default function Home() {
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
-      <div className="container mx-auto mb-10">
+      <div className=" mx-auto mb-10 px-0">
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
@@ -120,9 +120,9 @@ export default function Home() {
         <div className="mt-5 laptop:mt-5 p-2 laptop:p-0" ref={readingRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">Articles.</h1>
         </div>
-        <div className="w-full px-10 flex-col grid grid-cols-1 justify-items-auto">
+        <div className="w-full px-10 flex-col">
           {data.articles.map((article) => (
-            <div key={article.id} className="justify-self-stretch">
+            <div key={article.id} className="">
               <ArticleCard
                 key={article.id}
                 img={article.imageSrc}
@@ -162,6 +162,7 @@ export default function Home() {
             </Link>
           </div>
         )} */}
+
         <Footer />
       </div>
     </div>

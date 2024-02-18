@@ -18,16 +18,20 @@ const ArticleCard = ({ img, name, description, courtesy, handleClick }) => {
   return (
     <>
       <div
-        className={`w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300 ${
+        className={`w-full p-10 mob:px-0 tablet:px-0 rounded-lg transition-all ease-out duration-300 ${
           mounted && theme === "dark"
             ? "hover:bg-slate-800"
             : "hover:bg-slate-50"
         } hover:scale-105 link`}
         onClick={handleClick}
       >
-        <div className="flex justify-around flex-row">
-          <img className="rounded-lg w-1/5" src={`${img}`} alt="Pic"></img>
-          <div className="w-3/5">
+        <div className="flex laptop:flex-row tablet:flex-col mob:flex-col">
+          <img
+            className="object-cover h-40 laptop:h-full justify-items-center rounded-lg laptop:w-40"
+            src={`${img}`}
+            alt="Pic"
+          ></img>
+          <div className="laptop:px-5 tablet:px-0 mob:px-0">
             <div className="flex justify-between flex-col h-full">
               <div className="text-2xl">
                 {name ? name : "Title of the article"}

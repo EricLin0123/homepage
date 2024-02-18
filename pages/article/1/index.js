@@ -51,14 +51,14 @@ function Article() {
           <br></br>
           Here is a simple TVS diode circuit for DC applications:
         </p>
-        <div className="flex flex-row h-80 w-full">
+        <div className="flex flex-wrap justify-self-center w-full">
           <img
-            className="basis-1/2 object-contain"
+            className="basis-1/2 object-contain justify-self-center h-60"
             src="https://res.cloudinary.com/rspoc/image/upload/f_auto/q_auto/v1673455819/RS%20CONTENTFUL/Discovery/Other%20image%20assets/tvs_diodes.jpg"
             alt="TVS circuit"
           />
           <img
-            className="basis-1/2 shrink object-contain"
+            className="basis-1/2 object-contain justify-self-center h-60"
             src="https://www.shindengen.com/products/semi/column/files/images/tvs01_1.png"
           />
         </div>
@@ -93,6 +93,7 @@ function Article() {
           </a>
         </div>
       </div>
+
       <Footer />
     </div>
   );
