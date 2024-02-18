@@ -25,7 +25,7 @@ const ArticleCard = ({ img, name, description, courtesy, handleClick }) => {
         } hover:scale-105 link`}
         onClick={handleClick}
       >
-        <div className="flex laptop:flex-row tablet:flex-col mob:flex-col">
+        <div className="w-full flex laptop:flex-row tablet:flex-col mob:flex-col">
           <img
             className="object-cover h-40 laptop:h-full justify-items-center rounded-lg laptop:w-40"
             src={`${img}`}
