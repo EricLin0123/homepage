@@ -2,20 +2,16 @@ import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import Button from "../Button";
+import Button from "../../components/Button";
 import HomeIcon from "@mui/icons-material/Home";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({
-  handleWorkScroll,
-  handleAboutScroll,
-  handleReadingScroll,
-  isBlog,
-}) => {
+const Header = ({ handleWorkScroll, handleAboutScroll }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const isBlog = true;
 
   const { name, showBlog, showResume } = data;
 
@@ -29,13 +25,6 @@ const Header = ({
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
-              >
-                {name}.
-              </h1>
-
               <div className="flex items-center">
                 {data.darkMode && (
                   <Button
@@ -76,18 +65,23 @@ const Header = ({
               {!isBlog ? (
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleReadingScroll}>Article</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
                   {showResume && (
-                    <Button onClick={() => router.push("/resume")}>
+                    <Button
+                      onClick={() =>
+                        window.open("mailto:hello@chetanverma.com")
+                      }
+                    >
                       Resume
                     </Button>
                   )}
 
-                  <Button onClick={() => router.push("/contact")}>
+                  <Button
+                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                  >
                     Contact
                   </Button>
                 </div>
@@ -109,7 +103,9 @@ const Header = ({
                     </Button>
                   )}
 
-                  <Button onClick={() => router.push("/contact")}>
+                  <Button
+                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                  >
                     Contact
                   </Button>
                 </div>
@@ -123,30 +119,12 @@ const Header = ({
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
-          onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-        >
-          {name}.
-        </h1>
+        <h1 className="font-medium cursor-pointer mob:p-2 laptop:p-0"></h1>
         {!isBlog ? (
           <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleReadingScroll}>Article</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            {showResume && (
-              <Button
-                onClick={() => router.push("/resume")}
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
-            )}
-
-            <Button onClick={() => router.push("/contact")}>Contact</Button>
+            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+              Contact
+            </Button>
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -160,23 +138,13 @@ const Header = ({
           </div>
         ) : (
           <div className="flex">
-            <Button onClick={() => router.push("/")}>
+            <Button onClick={() => router.push("/")} classes="first:ml-1">
               <HomeIcon />
               &nbsp;Home
             </Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            {showResume && (
-              <Button
-                onClick={() => router.push("/resume")}
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
-            )}
-
-            <Button onClick={() => router.push("/contact")}>Contact</Button>
+            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+              Contact
+            </Button>
 
             {mounted && theme && data.darkMode && (
               <Button

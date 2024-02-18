@@ -10,13 +10,6 @@ const { projects } = data;
 const index = 0;
 
 function ProjectPage() {
-  const Router = useRouter();
-
-  const GoHome = (e) => {
-    e.preventDefault();
-    Router.push("/");
-  };
-
   return (
     <div className="grid justify-items-stretch">
       <Header />

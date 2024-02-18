@@ -6,6 +6,7 @@ import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
+import ArticleCard from "../components/ArticleCard";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -17,6 +18,7 @@ export default function Home() {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
+  const readingRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
   const textThree = useRef();
@@ -34,6 +36,14 @@ export default function Home() {
   const handleAboutScroll = () => {
     window.scrollTo({
       top: aboutRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleReadingScroll = () => {
+    window.scrollTo({
+      top: readingRef.current.offsetTop,
       left: 0,
       behavior: "smooth",
     });
@@ -60,30 +70,31 @@ export default function Home() {
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
+          handleReadingScroll={handleReadingScroll}
         />
         <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
+          <div className="animationTitle mt-5">
             <h1
               ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+              className="text-2xl tablet:text-6xl laptop:text-6xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-6xl laptop:text-6xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineTwo}
             </h1>
             <h1
               ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-6xl laptop:text-6xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineThree}
             </h1>
             <h1
               ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-6xl laptop:text-6xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineFour}
             </h1>
@@ -91,9 +102,8 @@ export default function Home() {
 
           <Socials className="mt-2 laptop:mt-5" />
         </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+        <div className="mt-5 laptop:mt-10 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
-
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
               <WorkCard
@@ -107,9 +117,27 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="mt-5 laptop:mt-5 p-2 laptop:p-0" ref={readingRef}>
+          <h1 className="tablet:m-10 text-2xl text-bold">Articles.</h1>
+        </div>
+        <div className="w-full px-10 flex-col grid grid-cols-1 justify-items-auto">
+          {data.articles.map((article) => (
+            <div className="justify-self-stretch">
+              <ArticleCard
+                key={article.id}
+                img={article.imageSrc}
+                name={article.title}
+                description={article.description}
+                courtesy={article.courtesy}
+                handleClick={() => router.push(`/article/${article.id}`)}
+              />
+            </div>
+          ))}
+        </div>
+
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          <p className="tablet:m-10 mt-2 text-base laptop:text-xl w-full laptop:w-3/5">
             {data.aboutpara}
           </p>
         </div>

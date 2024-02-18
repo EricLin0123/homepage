@@ -48,6 +48,21 @@
       "imageSrc": "2/overview.jpg"
     }
   ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Some PCB layout tips for ESD Protection",
+      "description": "Basic knowledge about ESD and TVS and some takeaways from reading 'ESD Protection Layout Guide' application note slva680 Texas Instruments.",
+      "imageSrc": "article/1/thumbnail.png",
+      "courtesy": "Guy Yater. (2015, February). ESD protection layout guide (rev. A). https://www.ti.com/lit/pdf/slva680 "
+    },
+    {
+      "id": 2,
+      "title": "More article coming soon",
+      "description": "要開學了...",
+      "imageSrc": "article/2/thumbnail.png"
+    }
+  ],
   "services": [
     {
       "id": "1",
@@ -60,7 +75,7 @@
       "description": "Write firmware for your project including FreeRTOS and LVGL for light weight graphic user interface"
     }
   ],
-  "aboutpara": "I am a bachelor EE student having a strong passion in PCB layout and embedded system development.  I've used EasyEDA and Kicad to draw footprint, schematic, and layout. I am currently implementing LVGL and FreeRTOS.",
+  "aboutpara": "I am a bachelor EE student having a strong passion in PCB layout and embedded system development.  I've used EasyEDA and Kicad to draw footprint, schematic, and layout. I am currently implementing LVGL & FreeRTOS and reading topics about signal integrity.",
   "resume": {
     "tagline": "👋  I'm a embedded system & PCB layout engineer.",
     "description": "I am a third-year bachelor student at the Department of Electrical Engineering in National Taiwan University having a strong passion in PCB layout and embedded system development.  I've used EasyEDA and Kicad to draw footprint, schematic, and layout. I am currently learning and implementing LVGL and FreeRTOS.",
